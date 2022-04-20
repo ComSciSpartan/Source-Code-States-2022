@@ -8,6 +8,7 @@ If you have any questions please raise your hand. You are allowed to use the int
 however you see fit. Best of luck!
 """
 
+import unittest
 import math
 
 teamName = "ENTER TEAM NAME"
@@ -52,10 +53,10 @@ def question4(x1, y1, x2, y2):
 """
 Prime Numbers
 A random number "data" will be passed in. Create an algorithm to check if the number is prime.
-Return True if it is prime and False otherwise. Hard coding the inputs to return a certain value
+Return True if prime and False otherwise. Hard coding the inputs to return a certain value
 will result in no points. Ex: if(input == 2) return True, is not allowed.
 """
-def question4(data):
+def question5(data):
     pass
 
 
@@ -66,15 +67,63 @@ index in the list and the dictionary value is the list element at that index. Ex
 [red, green, blue] is passed in. The resulting dictionary would be {'0' : 'red', '1' : 'green', 
 '2' : 'blue'}
 """
-def question5(data):
+def question6(data):
     pass
 
 
-def main():
-    print(teamName)
-    print(teamNumber)
-    print(ourNames)
+"""
+Difference in Area
+Calculate the difference between the area of the rectangle and the sphere. The rectangle is 
+passed in as "length" and "width" while the circle is passed in as "radius". Calculate the area
+of each shape and return their difference (rectangle area - circle area).
+"""
+def question7(length, width, radius):
+    pass
 
 
-if 1 == 1:
-    main()
+class testCases(unittest.TestCase):
+
+    def testQ1(self):
+        self.assertEqual(True, question1())
+
+    def testQ2(self):
+        expected = [0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,1597,2584,4181,6765]
+        self.assertEqual(expected, question2())
+
+    def testQ3(self):
+        setOne = ["0", "1", "2", "3"]
+        setOneUpdated = [0, 1, 2, 3]
+        setTwo = ["52", "64", "11000115", "999841"]
+        setTwoUpdated = [52, 64, 11000115, 999841]
+        self.assertEqual(setOneUpdated, question3(setOne))
+        self.assertEqual(setTwoUpdated, question3(setTwo))
+
+    def testQ4(self):
+        self.assertEqual(1, question4(2, 1, 1, 1))
+        self.assertEqual(10, question4(10, 8, 2, 2))
+
+    def testQ5(self):
+        setOne = [17, 2, 3, 5]
+        setTwo = [4, 6, 8, 9]
+        setThree = [11, 12, 13, 14]
+        setOneUpdated = [True, True, True, True]
+        setTwoUpdated = [False, False, False, False]
+        setThreeUpdated = [True, False, True, False]
+        for i in range(len(setOne)):
+            self.assertEqual(setOneUpdated[i], question5(setOne[i]))
+        for i in range(len(setTwo)):
+            self.assertEqual(setTwoUpdated[i], question5(setTwo[i]))
+        for i in range(len(setOne)):
+            self.assertEqual(setThreeUpdated[i], question5(setThree[i]))
+
+    def testQ6(self):
+        setOne = ["item1", "item2", "item3"]
+        setOneD = {'0' : 'item1', '1' : 'item2', '2' : 'item3'}
+        self.assertEqual(setOneD, question6(setOne))
+
+    def testQ7(self):
+        pass
+
+
+if __name__ == '__main__':
+    unittest.main()
