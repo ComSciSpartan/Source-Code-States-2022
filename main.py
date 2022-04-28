@@ -228,9 +228,9 @@ class testCases(unittest.TestCase):
 
     def testQ14(self):
         set1 = [1, 2, 3, 4, 6, 8, 12, 16, 24, 48]
-        self.assertEqual(set1, question13(set1))
+        self.assertEqual(set1, question13(48))
         set2 = [1, 2, 4, 5, 10, 20, 25, 50, 100]
-        self.assertEqual(set2, question13(set2))
+        self.assertEqual(set2, question13(100))
 
     def testQ15(self):
         container = []
