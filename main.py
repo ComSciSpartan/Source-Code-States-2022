@@ -62,6 +62,7 @@ def question5(data):
 
 """
 Build a Dictionary
+**Tie Breaker**
 Create a dictionary from the passed in list "data" and return it. The dictionary key is the value's
 index in the list and the dictionary value is the list element at that index. Ex the list
 [red, green, blue] is passed in. The resulting dictionary would be {'0' : 'red', '1' : 'green', 
@@ -76,8 +77,82 @@ Difference in Area
 Calculate the difference between the area of the rectangle and the sphere. The rectangle is 
 passed in as "length" and "width" while the circle is passed in as "radius". Calculate the area
 of each shape and return their difference (rectangle area - circle area).
+PLEASE USE 3.14 FOR PI, DO NOT USE MATH.PI
 """
 def question7(length, width, radius):
+    pass
+
+
+"""
+Mid Point
+Calculate the mid point between (x1,y1) and (x2,y2) then return it. Return the answer as a pair
+ex: return (distance1,distance2)
+"""
+def question8(x1, y1, x2, y2):
+    pass
+
+
+"""
+Scalar Volume
+Use the length, width, and height to calculate the area of the rectangular prism. Then scale the 
+volume by using the passed in scale factor. Return the final scaled volume.
+"""
+def question9(length, width, height, scale):
+    pass
+
+
+"""
+Logic Flow
+Use an if else block to determine if x1 is greater than or equal to x2. If x1 is greater than or 
+equal to x2 return true, otherwise return false.
+"""
+def question10(x1, x2):
+    pass
+
+
+"""
+Averages From a List
+A list of numbers will be passed in. Use a for loop to calculate the average of all the numbers
+in the list and return that average.
+"""
+def question11(data):
+    pass
+
+
+"""
+Powers
+A base and an exponent will be passed in. Raise the base to power of the exponent and return 
+the computed value. 
+"""
+def question12(base, power):
+    pass
+
+"""
+Extract a Message
+**Tie Breaker**
+Use a for loop to iterate over the elements in the list. The list elements will be strings that
+make up a secret message. To decode the message reverse each string in the list and then
+concatenate the strings together to create a phrase. Return the final string and make sure there
+are no leading or trailing spaces. Ex: ['terces', 'egassem'] yields 'secret message'
+"""
+def question13(data):
+    pass
+
+
+"""
+Factoring
+Use a while loop to compute all the factors for the number passed in. Add all the factors to a list
+and return the list. Ex: 15 yields [1,3,5,15]
+"""
+def question14(data):
+    pass
+
+
+"""
+Calculate Container Sizes
+Compute the size of each list and return it. Ex: [0,0,0] yields 3
+"""
+def question15(data):
     pass
 
 
@@ -122,6 +197,41 @@ class testCases(unittest.TestCase):
         self.assertEqual(setOneD, question6(setOne))
 
     def testQ7(self):
+        pass
+
+    def testQ8(self):
+        self.assertEqual((5,5), question8(0, 0, 10, 10))
+        self.assertEqual((7.5,7.5), question8(5, 5, 10, 10))
+
+    def testQ9(self):
+        self.assertEqual(1000, question9(5, 5, 5, 2))
+
+    def testQ10(self):
+        self.assertEqual(True, question10(5, 0))
+        self.assertEqual(False, question10(0, 5))
+        self.assertEqual(True, question10(1, 1))
+
+    def testQ11(self):
+        self.assertEqual(1, question11([1,1,1,1,1,1,1,1]))
+        self.assertEqual(10, question11([10,10,10,10,10,10,10]))
+        self.assertEqual(3, question11([1,2,3,4,5]))
+
+    def testQ12(self):
+        self.assertEqual(256, question12(2, 8))
+        self.assertEqual(1000, question12(10, 3))
+
+    def testQ12(self):
+        message1 = "Welcome to source code states 2022"
+        coded1 = ['emocleW', 'ot', 'ecruos', 'edoc', 'setats', '2202']
+        self.assertEqual(message1, question13(coded1))
+
+    def testQ13(self):
+        set1 = [1, 2, 3, 4, 6, 8, 12, 16, 24, 48]
+        self.assertEqual(set1, question13(set1))
+        set2 = [1, 2, 4, 5, 10, 20, 25, 50, 100]
+        self.assertEqual(set2, question13(set2))
+
+    def testQ14(self):
         pass
 
 
