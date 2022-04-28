@@ -76,10 +76,9 @@ def question6(data):
 Difference in Area
 Calculate the difference between the area of the rectangle and the sphere. The rectangle is 
 passed in as "length" and "width" while the circle is passed in as "radius". Calculate the area
-of each shape and return their difference (rectangle area - circle area).
-PLEASE USE 3.14 FOR PI, DO NOT USE MATH.PI
+of each shape and return their difference (rectangle area - rectangle2 area).
 """
-def question7(length, width, radius):
+def question7(length, width, length2, width2):
     pass
 
 
@@ -127,6 +126,7 @@ the computed value.
 def question12(base, power):
     pass
 
+
 """
 Extract a Message
 **Tie Breaker**
@@ -150,7 +150,7 @@ def question14(data):
 
 """
 Calculate Container Sizes
-Compute the size of each list and return it. Ex: [0,0,0] yields 3
+Compute the size of each list and return it. Ex: [54, 74, 30] yields 3
 """
 def question15(data):
     pass
@@ -197,7 +197,8 @@ class testCases(unittest.TestCase):
         self.assertEqual(setOneD, question6(setOne))
 
     def testQ7(self):
-        pass
+        self.assertEqual(25, question7(4, 7, 1, 3))
+        self.assertEqual(32, question7(6, 10, 7, 4))
 
     def testQ8(self):
         self.assertEqual((5,5), question8(0, 0, 10, 10))
@@ -220,20 +221,22 @@ class testCases(unittest.TestCase):
         self.assertEqual(256, question12(2, 8))
         self.assertEqual(1000, question12(10, 3))
 
-    def testQ12(self):
+    def testQ13(self):
         message1 = "Welcome to source code states 2022"
         coded1 = ['emocleW', 'ot', 'ecruos', 'edoc', 'setats', '2202']
         self.assertEqual(message1, question13(coded1))
 
-    def testQ13(self):
+    def testQ14(self):
         set1 = [1, 2, 3, 4, 6, 8, 12, 16, 24, 48]
         self.assertEqual(set1, question13(set1))
         set2 = [1, 2, 4, 5, 10, 20, 25, 50, 100]
         self.assertEqual(set2, question13(set2))
 
-    def testQ14(self):
-        pass
-
+    def testQ15(self):
+        container = []
+        for i in range(50):
+            self.assertEqual(i, question15(container))
+            container.append(i)
 
 if __name__ == '__main__':
     unittest.main()
