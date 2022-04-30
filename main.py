@@ -94,8 +94,7 @@ def question8(x1, y1, x2, y2):
 
 """
 Scalar Volume
-Use the length, width, and height to calculate the area of the rectangular prism. Then scale the 
-volume by using the passed in scale factor. Return the final scaled volume.
+Scale the length, width, and height then calculate the volume. Return the final volume.
 """
 def question9(length, width, height, scale):
     pass
