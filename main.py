@@ -74,8 +74,8 @@ def question6(data):
 
 """
 Difference in Area
-Calculate the difference between the area of the rectangle and the sphere. The rectangle is 
-passed in as "length" and "width" while the circle is passed in as "radius". Calculate the area
+Calculate the difference between the area of the rectangle and the sphere. The rectangles are 
+passed in as "length" and "width". Calculate the area
 of each shape and return their difference (rectangle area - rectangle2 area).
 """
 def question7(length, width, length2, width2):
@@ -193,7 +193,7 @@ class testCases(unittest.TestCase):
 
     def testQ6(self):
         setOne = ["item1", "item2", "item3"]
-        setOneD = {'0' : 'item1', '1' : 'item2', '2' : 'item3'}
+        setOneD = {0 : 'item1', 1 : 'item2', 2 : 'item3'}
         self.assertEqual(setOneD, question6(setOne))
 
     def testQ7(self):
@@ -228,9 +228,9 @@ class testCases(unittest.TestCase):
 
     def testQ14(self):
         set1 = [1, 2, 3, 4, 6, 8, 12, 16, 24, 48]
-        self.assertEqual(set1, question13(48))
+        self.assertEqual(set1, question14(48))
         set2 = [1, 2, 4, 5, 10, 20, 25, 50, 100]
-        self.assertEqual(set2, question13(100))
+        self.assertEqual(set2, question14(100))
 
     def testQ15(self):
         container = []
