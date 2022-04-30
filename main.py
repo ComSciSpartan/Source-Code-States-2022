@@ -4,6 +4,8 @@ fill out the variables before so that your grade can be recorded accurately.
 
 Please remove the pass statement from any function that you attempt to complete.
 
+Ties will be won by the team with the fewest lines of code in the tiebreaker questions.
+
 If you have any questions please raise your hand. You are allowed to use the internet
 however you see fit. Best of luck!
 """
