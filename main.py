@@ -75,7 +75,7 @@ def question6(data):
 
 """
 Difference in Area
-Calculate the difference between the area of the rectangle and the sphere. The rectangles are 
+Calculate the difference between the area of two rectangles. The rectangles are 
 passed in as "length" and "width". Calculate the area
 of each shape and return their difference (rectangle area - rectangle2 area).
 """
